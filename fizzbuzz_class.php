@@ -1,20 +1,30 @@
 <?php
+	//--------------------------------------------------------------------------
+	// FizzBuzzƒNƒ‰ƒX
+	//--------------------------------------------------------------------------
+
 	// –¼‘O‹óŠÔ
 	//namespace fizzbuzz;
-
+	
 	class FizzBuzz{
-		// “ü—ÍŽó•t
-		public function input_type(){
-			return trim(fgets(STDIN));
-		}
+		// ƒƒ“ƒo•Ï”
+		public $sosu1;
+		public $sosu2;
 		
 		// Å¬Œö”{”‚ÌŒvŽZ
 		public function saisho_kobaisu($sosu1, $sosu2){
 			return $sosu1 * $sosu2;
 		}
 		
-		public function validation($sosu){
-		    // ‘f””»’è
+		// ‘f””»’è
+		public function validation(){
+			if(is_int($sosu)){
+				echo "®”‚Å‚·B";
+			} else {
+				"®”‚Å‚Í‚ ‚è‚Ü‚¹‚ñB";
+			}
+exit;
+
 		    if($sosu < 2) {
 		        return false;
 		    } else if ($sosu == 2) {

@@ -5,23 +5,35 @@
 	// ƒIƒuƒWƒFƒNƒg‚Ì¶¬
 	$f_b = new FizzBuzz();
 	
+	// 
+	switch($argc){
+		case 1:
+			// ˆø”‚ª—^‚¦‚ç‚ê‚Ä‚¢‚È‚¢Žž
+			echo "2‚Â‚Ì‘f”‚ðˆø”‚Æ‚µ‚Ä“ü—Í‚µ‚Ä‰º‚³‚¢B";
+			break;
+		case 2:
+			// ˆø”‚ª‘«‚è‚È‚¢ê‡
+			echo "ˆø”‚ª‘«‚è‚Ü‚¹‚ñB";
+			break;
+		default:
+			// “ü—Í‚³‚ê‚½ˆø”‚ð‘ã“ü
+			$f_b->sosu1 = $argv[1];
+			$f_b->sosu2 = $argv[2];
+			
+			
+	}
+
+	
 	// 1‚Â–Ú‚Ì‘f”‚Ì“ü—Í‘Ò‚¿
 	input1:
 	echo "1‚Â–Ú‚Ì‘f”‚ð“ü—Í‚µ‚Ä‰º‚³‚¢B\n";
-	$sosu1 = $f_b->input_type();
-	
-	/*if($sosu1){
-	}*/
+	$f_b->sosu1 = trim(fgets(STDIN));
 	
 	// 2‚Â–Ú‚Ì‘f”‚Ì“ü—Í‘Ò‚¿
 	input2:
-	echo $sosu1."‚æ‚è‘å‚«‚¢‘f”‚ð“ü—Í‚µ‚Ä‰º‚³‚¢B\n";
-	$sosu2 = $f_b->input_type();
+	echo $f_b->sosu1."‚æ‚è‘å‚«‚¢‘f”‚ð“ü—Í‚µ‚Ä‰º‚³‚¢B\n";
+	$f_b->sosu2 = trim(fgets(STDIN));
 	echo "\n";
-	
-	/*if(){
-		goto input2;
-	}*/
 	
 	// Å¬Œö”{”‚ÌŒvŽZ
 	$saisho_kobaisu = $f_b->saisho_kobaisu($sosu1, $sosu2);
@@ -71,11 +83,4 @@
 			echo $i."\n";
 		}
 	}
-	
-	/*$hantei = is_prime($sosu1);
-	if($hantei){
-		echo "OK";
-	} else {
-		echo "NG";
-	}*/
 ?>
