@@ -20,7 +20,7 @@
 			$f_b->sosu1 = $argv[1];
 			$f_b->sosu2 = $argv[2];
 			
-			
+			$f_b->validation();
 	}
 
 	

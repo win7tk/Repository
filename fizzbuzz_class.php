@@ -18,10 +18,10 @@
 		
 		// 素数判定
 		public function validation(){
-			if(is_int($sosu)){
+			if(is_int($this->sosu1) == true && is_int($this->sosu2) == true){
 				echo "整数です。";
 			} else {
-				"整数ではありません。";
+				echo "整数以外は入力不可能です。";
 			}
 exit;
 
